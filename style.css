@@ -26,21 +26,29 @@ body {
 }
 
 .proyectos {
+    display: flex;
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Centra el contenido verticalmente si es necesario */
+    flex-direction: column; /* Asegura que el título y la cuadrícula estén en columna */
     padding: 20px;
+    text-align: center;
 }
 
 .grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    justify-content: center;
-    max-width: 900px;
-    margin: auto;
+    grid-template-columns: repeat(3, 1fr); /* Tres columnas */
+    gap: 70px; /* Espacio entre las imágenes */
+    justify-content: center; /* Centra la cuadrícula horizontalmente */
+    align-items: center; /* Centra las imágenes verticalmente dentro de las celdas */
+    max-width: 900px; /* Limita el ancho máximo de la cuadrícula */
+    margin: 0 auto; /* Centra la cuadrícula dentro de su contenedor */
 }
 
 .grid img {
     width: 100%;
-    max-width: 150px;
+    max-width: 300px; /* Tamaño máximo de las imágenes */
+    display: block; /* Elimina el espacio extra debajo de las imágenes */
+    margin: 0 auto; /* Centra las imágenes dentro de sus celdas */
 }
 
 .feedback {
@@ -50,7 +58,7 @@ body {
     align-items: center;
     text-align: center;
     background-color: rgb(11, 176, 143);
-    color: black;
+    color: rgb(255, 255, 255);
     margin: 0;
     width: 100%;
 }	
