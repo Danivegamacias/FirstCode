@@ -1,9 +1,10 @@
+/* Estilo general del cuerpo */
 body {
     margin: 0;
     font-family: "Comfortaa", sans-serif;
     text-align: center;
 }
-
+/* Encabezado con imagen de fondo */
 .titulo {
     display: flex;
     flex-direction: column;
@@ -24,7 +25,7 @@ body {
 .titulo h1 {
     margin-bottom: 10px;
 }
-
+/* Sección de proyectos */
 .proyectos {
     display: flex;
     justify-content: center;
@@ -33,7 +34,7 @@ body {
     padding: 20px;
     text-align: center;
 }
-
+/* Cuadrícula de imágenes */
 .imagenes {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -50,7 +51,7 @@ body {
     display: block;
     margin: 0 auto;
 }
-
+/* Sección de feedback */
 .feedback {
     display: flex;
     flex-direction: column;
@@ -77,12 +78,12 @@ body {
     align-items: flex-start;
     text-align: justify;
 }
-
+/* Sección de información */
 .info {
     flex: 1;
     padding-right: 20px;
 }
-
+/* Sección del mapa */
 .mapa {
     flex: 1;
     display: flex;
@@ -95,29 +96,9 @@ body {
     height: 300px;
     max-width: 600px;
 }
-
+/* Texto en gris */
 .textgrey {
     color: grey;
-}
-
-@media (max-width: 600px) {
-    .container {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .info {
-        padding-right: 0;
-    }
-
-    .mapa {
-        margin: 20px 0;
-    }
-
-    .mapa iframe {
-        width: 90%;
-        max-width: 100%;
-    }
 }
 
 .footer {
@@ -171,8 +152,30 @@ body {
     padding: 10px 0;
     margin-top: 10px;
 }
-
+/* Estilos responsivos */
 @media (max-width: 600px) {
+    .imagenes {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .info {
+        padding-right: 0;
+    }
+
+    .mapa {
+        margin: 20px 0;
+    }
+
+    .mapa iframe {
+        width: 90%;
+        max-width: 100%;
+    }
+
     .footer-container {
         flex-direction: column;
         align-items: center;
