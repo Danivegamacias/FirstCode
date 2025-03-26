@@ -13,42 +13,42 @@ body {
     background: url('./img/header.jpg') no-repeat center center/cover;
     color: black;
     width: 100%;
-    height: 730px; /* Mantén la altura de la imagen */
+    height: 730px;
     margin: 0;
 }
 
 .titulo h1, .titulo p {
-    margin: 0; /* Elimina márgenes para un mejor centrado */
+    margin: 0;
 }
 
 .titulo h1 {
-    margin-bottom: 10px; /* Espacio entre el h1 y el párrafo */
+    margin-bottom: 10px;
 }
 
 .proyectos {
     display: flex;
-    justify-content: center; /* Centra el contenido horizontalmente */
-    align-items: center; /* Centra el contenido verticalmente si es necesario */
-    flex-direction: column; /* Asegura que el título y la cuadrícula estén en columna */
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     padding: 20px;
     text-align: center;
 }
 
 .grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Tres columnas */
-    gap: 70px; /* Espacio entre las imágenes */
-    justify-content: center; /* Centra la cuadrícula horizontalmente */
-    align-items: center; /* Centra las imágenes verticalmente dentro de las celdas */
-    max-width: 900px; /* Limita el ancho máximo de la cuadrícula */
-    margin: 0 auto; /* Centra la cuadrícula dentro de su contenedor */
+    grid-template-columns: repeat(3, 1fr);
+    gap: 70px;
+    justify-content: center;
+    align-items: center;
+    max-width: 900px;
+    margin: 0 auto;
 }
 
 .grid img {
     width: 100%;
-    max-width: 300px; /* Tamaño máximo de las imágenes */
-    display: block; /* Elimina el espacio extra debajo de las imágenes */
-    margin: 0 auto; /* Centra las imágenes dentro de sus celdas */
+    max-width: 300px;
+    display: block;
+    margin: 0 auto;
 }
 
 .feedback {
@@ -61,7 +61,7 @@ body {
     color: rgb(255, 255, 255);
     margin: 0;
     width: 100%;
-}	
+}
 
 @media (max-width: 600px) {
     .grid {
@@ -105,9 +105,18 @@ body {
         flex-direction: column;
         text-align: center;
     }
-    
+
     .info {
         padding-right: 0;
+    }
+
+    .mapa {
+        margin: 20px 0;
+    }
+
+    .mapa iframe {
+        width: 90%;
+        max-width: 100%;
     }
 }
 
@@ -119,28 +128,28 @@ body {
 
 .footer-container {
     display: flex;
-    justify-content: space-between; /* Espacia los elementos horizontalmente */
-    align-items: center; /* Asegura que estén alineados verticalmente */
+    justify-content: space-between;
+    align-items: center;
     max-width: 1200px;
     margin: auto;
     padding: 10px;
-    flex-wrap: wrap; /* Permite que los elementos se ajusten en pantallas pequeñas */
+    flex-wrap: wrap;
 }
 
 .footer-text {
-    flex: 1; /* Ocupa espacio proporcional */
-    text-align: center; /* Centra el texto */
+    flex: 1;
+    text-align: center;
     color: black;
 }
 
 .footer-links {
     display: flex;
-    flex: 2; /* Ocupa más espacio que el texto */
-    justify-content: space-around; /* Espacia las columnas de soporte y diseñador */
+    flex: 2;
+    justify-content: space-around;
 }
 
 .footer-column {
-    text-align: center; /* Centra el contenido de cada columna */
+    text-align: center;
 }
 
 .footer-column h4 {
@@ -163,42 +172,25 @@ body {
     margin-top: 10px;
 }
 
-/* Responsive para móvil */
 @media (max-width: 600px) {
     .footer-container {
-        flex-direction: column; /* Cambia la dirección a columna */
-        align-items: center; /* Centra los elementos */
+        flex-direction: column;
+        align-items: center;
     }
 
     .footer-text {
-        order: 1; /* Asegura que "Hecho en Barcelona..." esté primero */
-        margin-bottom: 10px; /* Espacio debajo del texto */
+        order: 1;
+        margin-bottom: 10px;
     }
 
     .footer-links {
-        display: flex;
-        flex-direction: row; /* Cambia a fila para que Soporte y Diseñador estén en columnas */
-        justify-content: space-around; /* Espacia las columnas uniformemente */
-        width: 100%; /* Asegura que ocupe todo el ancho */
-        order: 2; /* Asegura que venga después del texto */
+        flex-direction: row;
+        justify-content: space-around;
+        width: 100%;
+        order: 2;
     }
 
     .footer-column {
-        text-align: center;
-        flex: 1; /* Asegura que cada columna ocupe el mismo espacio */
-    }
-
-    .mapa {
-        display: flex;
-        justify-content: center; /* Centra el mapa horizontalmente */
-        align-items: center; /* Centra el mapa verticalmente si es necesario */
-        text-align: center;
-        margin: 20px 0; /* Agrega un margen para separar el mapa de otros elementos */
-    }
-
-    .mapa iframe {
-        width: 90%; /* Ajusta el ancho del mapa para que se adapte a pantallas pequeñas */
-        height: 300px; /* Mantén una altura adecuada */
-        max-width: 100%; /* Asegura que no exceda el ancho del contenedor */
+        flex: 1;
     }
 }
