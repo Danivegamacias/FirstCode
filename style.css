@@ -68,3 +68,137 @@ body {
         grid-template-columns: repeat(2, 1fr);
     }
 }
+
+.container {
+    display: flex;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+    align-items: flex-start;
+    text-align: justify;
+}
+
+.info {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.mapa {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mapa iframe {
+    width: 100%;
+    height: 300px;
+    max-width: 600px;
+}
+
+.textgrey {
+    color: grey;
+}
+
+@media (max-width: 600px) {
+    .container {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .info {
+        padding-right: 0;
+    }
+}
+
+.footer {
+    background-color: #777;
+    color: white;
+    padding: 10px 0;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between; /* Espacia los elementos horizontalmente */
+    align-items: center; /* Asegura que estén alineados verticalmente */
+    max-width: 1200px;
+    margin: auto;
+    padding: 10px;
+    flex-wrap: wrap; /* Permite que los elementos se ajusten en pantallas pequeñas */
+}
+
+.footer-text {
+    flex: 1; /* Ocupa espacio proporcional */
+    text-align: center; /* Centra el texto */
+    color: black;
+}
+
+.footer-links {
+    display: flex;
+    flex: 2; /* Ocupa más espacio que el texto */
+    justify-content: space-around; /* Espacia las columnas de soporte y diseñador */
+}
+
+.footer-column {
+    text-align: center; /* Centra el contenido de cada columna */
+}
+
+.footer-column h4 {
+    margin: 0;
+    font-size: 16px;
+}
+
+.footer-column a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    margin: 3px 0;
+}
+
+.footer-copyright {
+    background-color: black;
+    color: white;
+    padding: 10px 0;
+    margin-top: 10px;
+}
+
+/* Responsive para móvil */
+@media (max-width: 600px) {
+    .footer-container {
+        flex-direction: column; /* Cambia la dirección a columna */
+        align-items: center; /* Centra los elementos */
+    }
+
+    .footer-text {
+        order: 1; /* Asegura que "Hecho en Barcelona..." esté primero */
+        margin-bottom: 10px; /* Espacio debajo del texto */
+    }
+
+    .footer-links {
+        display: flex;
+        flex-direction: row; /* Cambia a fila para que Soporte y Diseñador estén en columnas */
+        justify-content: space-around; /* Espacia las columnas uniformemente */
+        width: 100%; /* Asegura que ocupe todo el ancho */
+        order: 2; /* Asegura que venga después del texto */
+    }
+
+    .footer-column {
+        text-align: center;
+        flex: 1; /* Asegura que cada columna ocupe el mismo espacio */
+    }
+
+    .mapa {
+        display: flex;
+        justify-content: center; /* Centra el mapa horizontalmente */
+        align-items: center; /* Centra el mapa verticalmente si es necesario */
+        text-align: center;
+        margin: 20px 0; /* Agrega un margen para separar el mapa de otros elementos */
+    }
+
+    .mapa iframe {
+        width: 90%; /* Ajusta el ancho del mapa para que se adapte a pantallas pequeñas */
+        height: 300px; /* Mantén una altura adecuada */
+        max-width: 100%; /* Asegura que no exceda el ancho del contenedor */
+    }
+}
